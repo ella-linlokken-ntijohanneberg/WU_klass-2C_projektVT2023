@@ -4,6 +4,18 @@
     box-sizing: 0;
 }
 
+#grid_wrapper {
+    display: grid;
+    grid-template-columns: 60px minmax(500px, 1fr);
+    grid-template-rows: 100px 400px 400px 100px;
+    grid-template-areas: 
+        "na he"
+        "s1 s1"
+        "s2 s2"
+        "fo fo"
+        ;
+}
+
 #link_list a {
     text-decoration: none;
     letter-spacing: 0.1875rem;
@@ -66,18 +78,6 @@ nav {
 
 .burger_in_x_form #burger_line_3 {
     transform: rotate(45deg) translate(-5px, -6px);
-}
-
-#grid_wrapper {
-    display: grid;
-    grid-template-columns: minmax(200px, 1fr) 200px;
-    grid-template-rows: 100px 400px 400px 100px;
-    grid-template-areas: 
-        "he na"
-        "s1 s1"
-        "s2 s2"
-        "fo fo"
-        ;
 }
 
 header {
