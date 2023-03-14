@@ -6,10 +6,14 @@
     box-sizing: 0;
 }
 
+body {
+    background: rgb(250, 249, 248);
+}
+
 #grid_wrapper {
     display: grid;
-    grid-template-columns: 20vw 84vw;
-    grid-template-rows: 10vh 400px 400px 100px;
+    grid-template-columns: 20vw 80vw;
+    grid-template-rows: 10vh 60vh 40vh 10vh;
     grid-template-areas: 
         "na he"
         "s1 s1"
@@ -20,7 +24,7 @@
 
 header {
     grid-area: he;
-    background: rgb(250, 240, 234);
+    background: rgb(250, 249, 248);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -72,7 +76,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: rgb(250, 240, 234);
+    background-color: rgb(250, 249, 248);
     grid-area: na;
     position: sticky;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
@@ -81,7 +85,7 @@ nav {
 
 
 #link_list {
-    background: rgba(218, 209, 204, 0.8);
+    background: rgba(230, 229, 227, 0.95);
     height: 400px;
     width: 150px;
     position: absolute;
@@ -118,7 +122,20 @@ nav {
 
 #section_1 {
     grid-area: s1;
-    background-image: url("shopping_bag.png");
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-image: url(../img/20230314_171846.jpg);
+    background-color: rgb(250, 249, 248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cool_text {
+    height: 40%;
+    width: 75%;
+    background: rgb(250, 249, 248);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 #section_2 {
