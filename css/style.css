@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +8,8 @@
 
 #grid_wrapper {
     display: grid;
-    grid-template-columns: 150px 1fr;
-    grid-template-rows: 100px 400px 400px 100px;
+    grid-template-columns: 20vw 84vw;
+    grid-template-rows: 10vh 400px 400px 100px;
     grid-template-areas: 
         "na he"
         "s1 s1"
@@ -18,10 +20,18 @@
 
 header {
     grid-area: he;
-    background: rgb(213, 217, 230);
+    background: rgb(250, 240, 234);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+    font-family: 'Domine', serif;
+    font-size: 1rem;
 }
 
 #search_shopping_icons {
@@ -29,22 +39,20 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: relative;
-    left: 150px;
 }
 
 #bag_icon {
-    height: 80%;
+    height: 60%;
 }
 
 #search_icon {
-    height: 60%;
+    height: 40%;
 }
 
 #link_list a {
     text-decoration: none;
     letter-spacing: 0.1875rem;
-    color: rgb(255, 128, 0);
+    color: rgb(0, 0, 0);
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.25rem;
@@ -64,17 +72,20 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: rgb(184, 204, 219);
+    background-color: rgb(250, 240, 234);
     grid-area: na;
+    position: sticky;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+    top: 0;
 }
 
 
 #link_list {
-    background-color: rgb(184, 204, 219);
+    background: rgba(218, 209, 204, 0.8);
     height: 400px;
     width: 150px;
     position: absolute;
-    top: 100px;
+    top: 10vh;
     left: -150px;
     display: flex;
     flex-direction: column;
@@ -85,7 +96,7 @@ nav {
 }
 
 #burger {
-    margin-right: 55px;
+    margin-right: 9px;
     cursor: pointer;
 }
 
@@ -107,7 +118,7 @@ nav {
 
 #section_1 {
     grid-area: s1;
-    background: rgb(148, 173, 202);
+    background-image: url("shopping_bag.png");
 }
 
 #section_2 {
@@ -130,7 +141,7 @@ footer {
     background: rgb(160, 176, 199);
 }
 
-/* @media screen and (min-width: 360px) {
+@media screen and (min-width: 800px) {
     #grid_wrapper {
         display: grid;
         grid-template-columns: 150px minmax(1200px, 1fr);
@@ -256,4 +267,4 @@ footer {
         grid-area: fo;
         background: rgb(160, 176, 199);
     }
-} */
+}
