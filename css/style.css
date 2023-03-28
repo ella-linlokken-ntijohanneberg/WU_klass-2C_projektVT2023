@@ -12,8 +12,8 @@ body {
 
 #grid_wrapper {
     display: grid;
-    grid-template-columns: 20vw 80vw;
-    grid-template-rows: 10vh 51vh 180vh 20vh;
+    grid-template-columns: 15vw 85vw;
+    grid-template-rows: 10vh 51vh 170vh 20vh;
     grid-template-areas: 
         "na he"
         "s1 s1"
@@ -35,7 +35,7 @@ header {
 
 h1 a {
     font-family: 'Domine', serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-decoration: none;
     color: black;
 }
@@ -47,12 +47,13 @@ h1 a {
     align-items: center;
 }
 
-#bag_icon {
-    height: 60%;
+#bag_icon, #search_icon {
+    height: 45%;
 }
 
-#search_icon {
-    height: 40%;
+#bag_icon:hover, #search_icon:hover {
+    cursor: pointer;
+    background: rgb(212, 208, 202);
 }
 
 #link_list a {
@@ -65,10 +66,10 @@ h1 a {
 }
 
 #burger div {
-    width: 40px;
+    width: 30px;
     height: 2px;
     background-color: rgb(55, 55, 55);
-    margin: 10px;
+    margin: 7px;
     border-radius: 20%;
     transition: all 0.5s;
 }
@@ -83,7 +84,6 @@ nav {
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
     top: 0;
 }
-
 
 #link_list {
     background: rgba(224, 219, 213, 0.95);
@@ -109,16 +109,23 @@ nav {
     transform: translateX(150px)
 }
 
+#link_list a:hover {
+    text-decoration: underline;
+}
+
 .burger_in_x_form #burger_line_2 {
     opacity: 0;
 }
 
 .burger_in_x_form #burger_line_1 {
-    transform: rotate(-45deg) translate(-6px, 10px);
+    transform: rotate(-45deg) translate(-3px, 10px);
+    margin-right: 15px;
+
 }
 
 .burger_in_x_form #burger_line_3 {
-    transform: rotate(45deg) translate(-6px, -10px);
+    transform: rotate(45deg) translate(-3px, -10px);
+    margin-right: 15px;
 }
 
 #section_1 {
@@ -132,7 +139,7 @@ nav {
 }
 
 #front_text {
-    height: 40%;
+    height: 50%;
     width: 70%;
     background: rgb(242, 239, 235);
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
@@ -151,6 +158,7 @@ nav {
 
 #section_2 {
     border-top: solid 1px rgb(212, 208, 202);
+    margin-bottom: 5px;
     grid-area: s2;
     background: rgb(211, 219, 228);
     display: flex;
@@ -162,6 +170,10 @@ nav {
 .section_header {
     font-family: 'Domine', serif;
     font-size: 1.5rem;
+}
+
+#section_2 .section_header {
+    margin-top: 20px;
 }
 
 #popular_products {
@@ -181,6 +193,11 @@ nav {
     width: 70%;
     height: 32%;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+.popular_product_card:hover, .clothing_product_card:hover, .ami_product_card:hover {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.7);
+    cursor: pointer;
 }
 
 .product_img {
@@ -212,12 +229,12 @@ footer {
     grid-area: fo;
     background: rgb(242, 239, 235);
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     border-top: 1px solid rgb(212, 208, 202);
 }
 
 #footer_info {
+    margin: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -231,9 +248,7 @@ footer a {
 }
 
 footer a:hover {
-    font-family: 'Oxygen', sans-serif;
     text-decoration: underline;
-    color: black;
 }
 
 #social_media {
@@ -241,17 +256,103 @@ footer a:hover {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin: 5px;
 }
 
 #social_media_icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
     height: 60%;
+}
+
+.icons {
+    height: 70%;
+    width: auto;
+}
+
+.icons:hover {
+    background: rgb(212, 208, 202);
+    cursor: pointer;
+}
+
+#clothing_grid_wrapper {
+    display: grid;
+    grid-template-columns: 15vw 85vw;
+    grid-template-rows: 10vh 75vh 320vh 20vh;
+    grid-template-areas: 
+        "na he"
+        "s1 s1"
+        "s2 s2"
+        "fo fo"
+        ;
+}
+
+#clothing_s1, #amigurumi_s1 {
+    grid-area: s1;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: rgb(169, 176, 184);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#clothing_information, #amigurumi_information {
+    background: rgb(242, 239, 235);
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+#clothing_products, #amigurumi_products {
+    grid-area: s2;
+    background: rgb(211, 219, 228);
+    border-top: solid 1px rgb(212, 208, 202);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.clothing_product_card, .ami_product_card {
+    background: rgb(242, 239, 235);
+    width: 70%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+.ami_product_card {
+    height: 23%;
+}
+
+#amigurumi_grid_wrapper {
+    display: grid;
+    grid-template-columns: 15vw 85vw;
+    grid-template-rows: 10vh 75vh 210vh 20vh;
+    grid-template-areas: 
+        "na he"
+        "s1 s1"
+        "s2 s2"
+        "fo fo"
+        ;
 }
 
 @media screen and (min-width: 700px) {
     
     #grid_wrapper {
         grid-template-columns: 100%;
-        grid-template-rows: 100px 50px 100vh 90vh 20vh;
+        grid-template-rows: 100px 50px 70vh 90vh 25vh;
         grid-template-areas: 
             "he"
             "na"
@@ -262,30 +363,19 @@ footer a:hover {
     }
     
     h1 a {
-        font-size: 2rem;
+        font-size: 2.6rem;
     }
 
     #search_shopping_icons {
         width: 40%;
         justify-content: flex-end;
     }
-
-    #bag_icon:hover, #search_icon:hover {
-        cursor: pointer;
-        background: rgb(212, 208, 202);
-    }
     
     nav {
-        display: flex;
         justify-content: flex-end;
-        align-items: center;
-        background-color: rgb(242, 239, 235);
-        grid-area: na;
-        position: sticky;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.3);
         top: 100px;
     }
-    
     
     #link_list {
         height: 50px;
@@ -293,130 +383,121 @@ footer a:hover {
         top: 0px;
         left: 0px;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
         transition: none;
-    }
-
-    #link_list a:hover {
-        text-decoration: underline;
     }
 
     #burger {
         display: none;
     }
     
-    #section_1 {
-        grid-area: s1;
-        margin-bottom: 5px;
-        margin-top: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    #front_text {
-        height: 40%;
-        width: 70%;
-        background: rgb(244, 238, 231);
-        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
-    
     #s1_text {
-        font-family: 'Domine', serif;
-        font-size: 3rem;
-        width: 78%;
-        text-align: center;
-    }
-    
-    #section_2 {
-        border-top: solid 1px rgb(212, 208, 202);
-        grid-area: s2;
-        background: rgb(255, 252, 248);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        font-size: 3.5rem;
+        width: 80%;
     }
     
     .section_header {
-        font-family: 'Domine', serif;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     #popular_products {
-        display: flex;
         flex-direction: row;
     }
     
     .popular_product_card {
-        background: rgb(212, 208, 202);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
         width: 30%;
         height: 90%;
-        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.4);
-    }
-
-    .popular_product_card:hover {
-        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.7);
-        cursor: pointer;
     }
     
     .product_img {
         width: 75%;
-        height: auto;
-    }
-    
-    .product_info {
-        border: solid 1px rgb(212, 208, 202);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .text_header {
-        margin: 5px;
-        font-family: 'Domine', serif;
-        font-size: 1.2rem;
-    }
-    
-    .product_text {
-        margin: 5px;
-        font-family: 'Oxygen', sans-serif;
     }
     
     footer {
-        grid-area: fo;
-        background: rgb(242, 239, 235);
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
         border-top: 1px solid rgb(212, 208, 202);
     }
+    
+    .icons {
+        height: 85%;
+        width: auto;
+    }
 
-    #footer_info {
+    #clothing_grid_wrapper {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 100px 50px 60vh 93vh 25vh;
+        grid-template-areas: 
+            "he he"
+            "na na"
+            "s1 s2"
+            "s1 s2"
+            "fo fo"
+            ;
+    }
+    
+    #clothing_s1 {
+        grid-area: s1;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background: rgb(169, 176, 184);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #clothing_s1 h2, #amigurumi_s1 h2 {
+        text-align: center;
+    }
+    
+    #clothing_information, #amigurumi_information {
+        background: rgb(242, 239, 235);
+        width: 90%;
+        height: 70%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        height: 100%;
+        align-items: center;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     }
     
-    footer a {
-        font-family: 'Oxygen', sans-serif;
-        text-decoration: none;
-        color: black;
+    #clothing_products, #amigurumi_products {
+        grid-area: s2;
+        background: rgb(211, 219, 228);
+        border-top: solid 1px rgb(212, 208, 202);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 5px;
+        margin-left: 5px;
     }
     
-    footer a:hover {
-        font-family: 'Oxygen', sans-serif;
-        text-decoration: underline;
-        color: black;
+    .clothing_product_card, .ami_product_card {
+        background: rgb(242, 239, 235);
+        width: 30%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .ami_product_card {
+        margin: 50px;
+    }
+
+    #amigurumi_grid_wrapper {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 100px 50px 60vh 93vh 25vh;
+        grid-template-areas: 
+            "he he"
+            "na na"
+            "s1 s2"
+            "s1 s2"
+            "fo fo"
     }
 }
