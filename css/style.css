@@ -56,24 +56,6 @@ h1 a {
     background: rgb(212, 208, 202);
 }
 
-#link_list a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-family: 'Domine', serif;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-}
-
-#burger div {
-    width: 30px;
-    height: 2px;
-    background-color: rgb(55, 55, 55);
-    margin: 7px;
-    border-radius: 20%;
-    transition: all 0.5s;
-}
-
 nav {
     display: flex;
     justify-content: space-around;
@@ -97,6 +79,24 @@ nav {
     align-items: center;
     justify-content: space-around;
     list-style: none;
+    transition: all 0.5s;
+}
+
+#link_list a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: 'Domine', serif;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+#burger div {
+    width: 30px;
+    height: 2px;
+    background-color: rgb(55, 55, 55);
+    margin: 7px;
+    border-radius: 20%;
     transition: all 0.5s;
 }
 
@@ -138,7 +138,7 @@ nav {
     align-items: center;
 }
 
-#front_text, #about_front_text {
+#front_text, #about_front_text, #blog_front_text {
     height: 50%;
     width: 70%;
     background: rgb(242, 239, 235);
@@ -196,7 +196,7 @@ nav {
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.4);
 }
 
-.popular_product_card:hover, .clothing_product_card:hover, .ami_product_card:hover {
+.popular_product_card:hover, .clothing_product_card:hover, .ami_product_card:hover, #post_1:hover, .post_2_3:hover {
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.7);
     cursor: pointer;
 }
@@ -289,7 +289,7 @@ footer a:hover {
         ;
 }
 
-#clothing_s1, #amigurumi_s1, #about_s1 {
+#clothing_s1, #amigurumi_s1, #about_s1, #blog_s1 {
     grid-area: s1;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -311,7 +311,7 @@ footer a:hover {
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
-#clothing_products, #amigurumi_products {
+#clothing_products, #amigurumi_products, #blog_s2 {
     grid-area: s2;
     background: rgb(211, 219, 228);
     border-top: solid 1px rgb(212, 208, 202);
@@ -373,6 +373,54 @@ footer a:hover {
     height: auto;
     width: 95%;
     border: solid 1px rgb(212, 208, 202);
+}
+
+#blog_grid_wrapper {
+    display: grid;
+    grid-template-columns: 15vw 85vw;
+    grid-template-rows: 10vh 35vh 114vh 210vh 20vh;
+    grid-template-areas: 
+        "na he"
+        "s1 s1"
+        "s2 s2"
+        "s3 s3"
+        "fo fo"
+        ;  
+}
+
+#post_1, .post_2_3 {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(242, 239, 235);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+.post_2_3 {
+    height: 45%;
+}
+
+#project_1, #project_2, #project_3 {
+    width: 100%;
+    height: auto;
+    border: solid 1px rgb(212, 208, 202);
+}
+
+#blog_s2 {
+    margin-bottom: 0;
+}
+
+#blog_s3 {
+    grid-area: s3;
+    background: rgb(211, 219, 228);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
 @media screen and (min-width: 700px) {
@@ -548,5 +596,30 @@ footer a:hover {
         height: auto;
         width: 70%;
         border: solid 1px rgb(212, 208, 202);
+    }
+    
+    #blog_grid_wrapper {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 100px 50px 50vh 142vh 25vh;
+        grid-template-areas: 
+            "he he"
+            "na na"
+            "s1 s1"
+            "s2 s3"
+            "fo fo"
+    }
+
+    .post_2_3 {
+        flex-direction: row;
+    }
+
+    #blog_s2 {
+        margin-bottom: 5px;
+    }
+
+    #project_2, #project_3, .post_2_3 .product_info {
+        height: 100%;
+        width: auto;
     }
 }
