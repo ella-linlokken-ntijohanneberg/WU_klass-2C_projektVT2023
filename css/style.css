@@ -490,16 +490,13 @@ footer a:hover {
     footer {
         flex-direction: row;
         justify-content: space-between;
-        border-top: 1px solid rgb(212, 208, 202);
     }
     
     .icons {
         height: 85%;
-        width: auto;
     }
 
     #clothing_grid_wrapper, #amigurumi_grid_wrapper {
-        display: grid;
         grid-template-columns: 20% 80%;
         grid-template-rows: 100px 50px 153vh 25vh;
         grid-template-areas: 
@@ -509,54 +506,25 @@ footer a:hover {
             "fo fo"
             ;
     }
-    
-    #clothing_s1 {
-        grid-area: s1;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        background: rgb(169, 176, 184);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
 
     #clothing_s1 h2, #amigurumi_s1 h2 {
         text-align: center;
     }
     
     #clothing_information, #amigurumi_information {
-        background: rgb(242, 239, 235);
-        width: 90%;
         height: 70%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     }
     
     #clothing_products, #amigurumi_products {
-        grid-area: s2;
-        background: rgb(211, 219, 228);
-        border-top: solid 1px rgb(212, 208, 202);
-        display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
         margin-top: 5px;
         margin-left: 5px;
     }
     
     .clothing_product_card, .ami_product_card {
-        background: rgb(242, 239, 235);
         width: 30%;
         height: 40%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.4);
     }
 
     .ami_product_card {
@@ -564,7 +532,6 @@ footer a:hover {
     }
 
     #about_grid_wrapper {
-        display: grid;
         grid-template-columns: 40% 60%;
         grid-template-rows: 100px 50px 50vh 70vh 25vh;
         grid-template-areas: 
@@ -582,11 +549,9 @@ footer a:hover {
     #about_img {
         height: auto;
         width: 70%;
-        border: solid 1px rgb(212, 208, 202);
     }
     
     #blog_grid_wrapper {
-        display: grid;
         grid-template-columns: 40% 60%;
         grid-template-rows: 100px 50px 50vh 142vh 25vh;
         grid-template-areas: 
